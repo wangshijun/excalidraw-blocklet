@@ -1,3 +1,3 @@
-## 2020-10-13
+## 0.2.0 (May 14, 2022)
 
-- Added ability to embed scene source into exported PNG/SVG files so you can import the scene from them (open via `Load` button or drag & drop). #2219
+- chore: convert excalidraw to a blocklet
