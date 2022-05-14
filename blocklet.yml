@@ -1,4 +1,4 @@
-homepage: 'https://github.com/wangshijun/excalidraw-blocklet'
+homepage: https://github.com/wangshijun/excalidraw-blocklet
 name: excalidraw
 title: Excalidraw
 description: Self host excelidraw as a blocklet
@@ -20,10 +20,10 @@ interfaces:
     port: BLOCKLET_PORT
     protocol: http
 did: z8iZxVUfZZBPpLhVov5YqsaorNX9F2vKAKeMc
-version: 0.2.0
+version: 0.3.0
 community: ''
-documentation: 'https://blog.excalidraw.com'
-license: 'MIT'
+documentation: https://blog.excalidraw.com
+license: MIT
 logo: logo.png
 payment:
   price: []
