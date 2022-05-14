@@ -1,0 +1,42 @@
+name: excalidraw
+title: Excalidraw
+description: Self host excelidraw as a blocklet
+group: dapp
+main: server/index.js
+author:
+  name: wangshijun
+specVersion: 1.2.4
+files:
+  - build
+  - blocklet.md
+  - screenshots
+interfaces:
+  - type: web
+    name: publicUrl
+    path: /
+    prefix: '*'
+    port: BLOCKLET_PORT
+    protocol: http
+did: z8iZxVUfZZBPpLhVov5YqsaorNX9F2vKAKeMc
+version: 1.0.0
+community: ''
+documentation: ''
+homepage: ''
+license: ''
+payment:
+  price: []
+  share: []
+timeout:
+  start: 60
+requirements:
+  server: '>=1.6.2'
+  os: '*'
+  cpu: '*'
+environments: []
+capabilities:
+  clusterMode: false
+  component: true
+screenshots: []
+children: []
+scripts:
+  dev: npm run start

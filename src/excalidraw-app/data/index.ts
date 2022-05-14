@@ -67,6 +67,12 @@ export const getCollabServer = async (): Promise<{
   url: string;
   polling: boolean;
 }> => {
+  if (window.blocklet && window.blocklet.appName) {
+    return {
+      url: window.location.origin,
+      polling: false,
+    };
+  }
   if (process.env.REACT_APP_WS_SERVER_URL) {
     return {
       url: process.env.REACT_APP_WS_SERVER_URL,

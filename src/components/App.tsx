@@ -5856,6 +5856,11 @@ declare global {
       app: InstanceType<typeof App>;
       history: History;
     };
+    blocklet: {
+      appId: string;
+      appUrl: string;
+      appName: string;
+    };
   }
 }
 
