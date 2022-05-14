@@ -10,6 +10,7 @@ specVersion: 1.2.7
 files:
   - build
   - blocklet.md
+  - logo.png
   - screenshots
 interfaces:
   - type: web
@@ -23,6 +24,7 @@ version: 0.2.0
 community: ''
 documentation: 'https://blog.excalidraw.com'
 license: 'MIT'
+logo: logo.png
 payment:
   price: []
   share: []
