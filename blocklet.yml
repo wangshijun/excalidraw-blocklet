@@ -1,4 +1,4 @@
-homepage: ''
+homepage: 'https://github.com/wangshijun/excalidraw-blocklet'
 name: excalidraw
 title: Excalidraw
 description: Self host excelidraw as a blocklet
@@ -21,8 +21,8 @@ interfaces:
 did: z8iZxVUfZZBPpLhVov5YqsaorNX9F2vKAKeMc
 version: 0.2.0
 community: ''
-documentation: ''
-license: ''
+documentation: 'https://blog.excalidraw.com'
+license: 'MIT'
 payment:
   price: []
   share: []
@@ -36,7 +36,8 @@ environments: []
 capabilities:
   clusterMode: false
   component: true
-screenshots: []
+screenshots:
+  - cover.png
 children: []
 scripts:
   dev: npm run start
