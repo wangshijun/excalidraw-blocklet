@@ -39,7 +39,10 @@ capabilities:
   clusterMode: false
   component: true
 screenshots:
-  - cover.png
+  - FOqBYTvVgBQKcyJ.jpeg
+  - FOqBWm7VgAg2Lyy.jpeg
+  - FOqBT5cVgBsZTZ5.jpeg
+  - FOqBVYNVgAwQpuc.jpeg
 children: []
 scripts:
   dev: npm run start
