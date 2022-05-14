@@ -1,3 +1,7 @@
+## 0.5.0 (May 14, 2022)
+
+- chore: add screenshots
+
 ## 0.4.0 (May 14, 2022)
 
 - fix: readme image ref
