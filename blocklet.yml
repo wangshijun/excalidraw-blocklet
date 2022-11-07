@@ -20,7 +20,7 @@ interfaces:
     port: BLOCKLET_PORT
     protocol: http
 did: z8iZxVUfZZBPpLhVov5YqsaorNX9F2vKAKeMc
-version: 0.5.0
+version: 0.6.0
 community: ''
 documentation: https://blog.excalidraw.com
 license: MIT
@@ -43,6 +43,6 @@ screenshots:
   - FOqBWm7VgAg2Lyy.jpeg
   - FOqBT5cVgBsZTZ5.jpeg
   - FOqBVYNVgAwQpuc.jpeg
-children: []
 scripts:
   dev: npm run start
+components: []

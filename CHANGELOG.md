@@ -1,3 +1,7 @@
+## 0.6.0 (November 07, 2022)
+
+- chore: merge with latest excalidraw
+
 ## 0.5.0 (May 14, 2022)
 
 - chore: add screenshots
