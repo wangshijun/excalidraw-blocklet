@@ -114,13 +114,23 @@
       "create": "יצירת קישור",
       "label": "קישור"
     },
+    "lineEditor": {
+      "edit": "",
+      "exit": ""
+    },
     "elementLock": {
       "lock": "נעילה",
       "unlock": "ביטול נעילה",
       "lockAll": "לנעול הכל",
       "unlockAll": "שחרור הכול"
     },
-    "statusPublished": ""
+    "statusPublished": "",
+    "sidebarLock": ""
+  },
+  "library": {
+    "noItems": "",
+    "hint_emptyLibrary": "",
+    "hint_emptyPrivateLibrary": ""
   },
   "buttons": {
     "clearReset": "אפס את הלוח",

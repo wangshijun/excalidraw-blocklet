@@ -110,17 +110,27 @@
     "unbindText": "",
     "bindText": "",
     "link": {
+      "edit": "Redeguoti nuorodą",
+      "create": "Sukurti nuorodą",
+      "label": "Nuoroda"
+    },
+    "lineEditor": {
       "edit": "",
-      "create": "",
-      "label": ""
+      "exit": ""
     },
     "elementLock": {
-      "lock": "",
-      "unlock": "",
+      "lock": "Užrakinti",
+      "unlock": "Atrakinti",
       "lockAll": "",
       "unlockAll": ""
     },
-    "statusPublished": ""
+    "statusPublished": "",
+    "sidebarLock": ""
+  },
+  "library": {
+    "noItems": "",
+    "hint_emptyLibrary": "",
+    "hint_emptyPrivateLibrary": ""
   },
   "buttons": {
     "clearReset": "",

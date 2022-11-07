@@ -114,13 +114,23 @@
       "create": "Hivatkozás létrehozása",
       "label": "Hivatkozás"
     },
+    "lineEditor": {
+      "edit": "",
+      "exit": ""
+    },
     "elementLock": {
       "lock": "",
       "unlock": "",
       "lockAll": "",
       "unlockAll": ""
     },
-    "statusPublished": ""
+    "statusPublished": "",
+    "sidebarLock": ""
+  },
+  "library": {
+    "noItems": "",
+    "hint_emptyLibrary": "",
+    "hint_emptyPrivateLibrary": ""
   },
   "buttons": {
     "clearReset": "Vászon törlése",
@@ -429,5 +439,11 @@
     "5c940d": "Lime 9",
     "e67700": "Sárga 9",
     "d9480f": "Narancs 9"
+  },
+  "welcomeScreen": {
+    "data": "Minden adatodat kizárólag a böngésződben tároljuk.",
+    "menuHints": "Export, beállítások, nyelvek, ...",
+    "toolbarHints": "Válassz egy eszközt & kezdj alkotni!",
+    "helpHints": "Gyorsbillentyűk & súgó"
   }
 }

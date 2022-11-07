@@ -114,13 +114,23 @@
       "create": "",
       "label": ""
     },
+    "lineEditor": {
+      "edit": "Bewerk regel",
+      "exit": "Verlaat regel-editor"
+    },
     "elementLock": {
       "lock": "",
       "unlock": "",
       "lockAll": "",
       "unlockAll": ""
     },
-    "statusPublished": ""
+    "statusPublished": "",
+    "sidebarLock": ""
+  },
+  "library": {
+    "noItems": "",
+    "hint_emptyLibrary": "",
+    "hint_emptyPrivateLibrary": ""
   },
   "buttons": {
     "clearReset": "Canvas opnieuw instellen",

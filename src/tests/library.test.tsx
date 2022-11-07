@@ -1,4 +1,6 @@
-import { render, waitFor } from "./test-utils";
+import { fireEvent, render, waitFor } from "./test-utils";
+import { queryByTestId } from "@testing-library/react";
+
 import ExcalidrawApp from "../excalidraw-app";
 import { API } from "./helpers/api";
 import { MIME_TYPES } from "../constants";
@@ -8,8 +10,30 @@ import { serializeLibraryAsJSON } from "../data/json";
 import { distributeLibraryItemsOnSquareGrid } from "../data/library";
 import { ExcalidrawGenericElement } from "../element/types";
 import { getCommonBoundingBox } from "../element/bounds";
+import { parseLibraryJSON } from "../data/blob";
 
 const { h } = window;
+
+const libraryJSONPromise = API.readFile(
+  "./fixtures/fixture_library.excalidrawlib",
+  "utf8",
+);
+
+const mockLibraryFilePromise = new Promise<Blob>(async (resolve, reject) => {
+  try {
+    resolve(
+      new Blob([await libraryJSONPromise], { type: MIME_TYPES.excalidrawlib }),
+    );
+  } catch (error) {
+    reject(error);
+  }
+});
+
+jest.mock("../data/filesystem.ts", () => ({
+  __esmodule: true,
+  ...jest.requireActual("../data/filesystem.ts"),
+  fileOpen: jest.fn(() => mockLibraryFilePromise),
+}));
 
 describe("library", () => {
   beforeEach(async () => {
@@ -37,11 +61,9 @@ describe("library", () => {
   // NOTE: mocked to test logic, not actual drag&drop via UI
   it("drop library item onto canvas", async () => {
     expect(h.elements).toEqual([]);
-    const libraryItems: LibraryItem = JSON.parse(
-      await API.readFile("./fixtures/fixture_library.excalidrawlib", "utf8"),
-    ).library[0];
+    const libraryItems = parseLibraryJSON(await libraryJSONPromise);
     await API.drop(
-      new Blob([serializeLibraryAsJSON([libraryItems])], {
+      new Blob([serializeLibraryAsJSON(libraryItems)], {
         type: MIME_TYPES.excalidrawlib,
       }),
     );
@@ -53,11 +75,9 @@ describe("library", () => {
   it("inserting library item should revert to selection tool", async () => {
     UI.clickTool("rectangle");
     expect(h.elements).toEqual([]);
-    const libraryItems: LibraryItem = JSON.parse(
-      await API.readFile("./fixtures/fixture_library.excalidrawlib", "utf8"),
-    ).library[0];
+    const libraryItems = parseLibraryJSON(await libraryJSONPromise);
     await API.drop(
-      new Blob([serializeLibraryAsJSON([libraryItems])], {
+      new Blob([serializeLibraryAsJSON(libraryItems)], {
         type: MIME_TYPES.excalidrawlib,
       }),
     );
@@ -65,6 +85,32 @@ describe("library", () => {
       expect(h.elements).toEqual([expect.objectContaining({ id: "A_copy" })]);
     });
     expect(h.state.activeTool.type).toBe("selection");
+  });
+});
+
+describe("library menu", () => {
+  it("should load library from file picker", async () => {
+    const { container } = await render(<ExcalidrawApp />);
+
+    const latestLibrary = await h.app.library.getLatestLibrary();
+    expect(latestLibrary.length).toBe(0);
+
+    const libraryButton = container.querySelector(".library-button");
+
+    fireEvent.click(libraryButton!);
+    fireEvent.click(container.querySelector(".Sidebar__dropdown-btn")!);
+    queryByTestId(container, "lib-dropdown--load")!.click();
+
+    const libraryItems = parseLibraryJSON(await libraryJSONPromise);
+
+    await waitFor(async () => {
+      const latestLibrary = await h.app.library.getLatestLibrary();
+      expect(latestLibrary.length).toBeGreaterThan(0);
+      expect(latestLibrary.length).toBe(libraryItems.length);
+      expect(latestLibrary[0].elements).toEqual(libraryItems[0].elements);
+    });
+
+    expect(true).toBe(true);
   });
 });
 

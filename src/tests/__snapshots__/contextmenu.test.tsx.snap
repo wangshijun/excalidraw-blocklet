@@ -38,24 +38,26 @@ Object {
   "gridSize": null,
   "height": 100,
   "isBindingEnabled": true,
-  "isLibraryOpen": false,
   "isLoading": false,
   "isResizing": false,
   "isRotating": false,
+  "isSidebarDocked": false,
   "lastPointerDownWith": "mouse",
   "multiElement": null,
   "name": "Untitled-201933152653",
   "offsetLeft": 20,
   "offsetTop": 10,
+  "openDialog": null,
   "openMenu": null,
   "openPopup": null,
+  "openSidebar": null,
   "pasteDialog": Object {
     "data": null,
     "shown": false,
   },
   "penDetected": false,
   "penMode": false,
-  "pendingImageElement": null,
+  "pendingImageElementId": null,
   "previousSelectedElementIds": Object {},
   "resizingElement": null,
   "scrollX": 0,
@@ -68,15 +70,16 @@ Object {
   "selectedGroupIds": Object {
     "g1": true,
   },
+  "selectedLinearElement": null,
   "selectionElement": null,
   "shouldCacheIgnoreZoom": false,
-  "showHelpDialog": false,
   "showHyperlinkPopup": false,
   "showStats": false,
+  "showWelcomeScreen": true,
   "startBoundElement": null,
   "suggestedBindings": Array [],
   "theme": "light",
-  "toastMessage": null,
+  "toast": null,
   "viewBackgroundColor": "#ffffff",
   "viewModeEnabled": false,
   "width": 200,
@@ -171,7 +174,7 @@ Object {
 
 exports[`contextMenu element right-clicking on a group should select whole group: [end of test] number of elements 1`] = `2`;
 
-exports[`contextMenu element right-clicking on a group should select whole group: [end of test] number of renders 1`] = `5`;
+exports[`contextMenu element right-clicking on a group should select whole group: [end of test] number of renders 1`] = `6`;
 
 exports[`contextMenu element selecting 'Add to library' in context menu adds element to library: [end of test] appState 1`] = `
 Object {
@@ -211,24 +214,26 @@ Object {
   "gridSize": null,
   "height": 100,
   "isBindingEnabled": true,
-  "isLibraryOpen": false,
   "isLoading": false,
   "isResizing": false,
   "isRotating": false,
+  "isSidebarDocked": false,
   "lastPointerDownWith": "mouse",
   "multiElement": null,
   "name": "Untitled-201933152653",
   "offsetLeft": 20,
   "offsetTop": 10,
+  "openDialog": null,
   "openMenu": null,
   "openPopup": null,
+  "openSidebar": null,
   "pasteDialog": Object {
     "data": null,
     "shown": false,
   },
   "penDetected": false,
   "penMode": false,
-  "pendingImageElement": null,
+  "pendingImageElementId": null,
   "previousSelectedElementIds": Object {},
   "resizingElement": null,
   "scrollX": 0,
@@ -238,15 +243,18 @@ Object {
     "id0": true,
   },
   "selectedGroupIds": Object {},
+  "selectedLinearElement": null,
   "selectionElement": null,
   "shouldCacheIgnoreZoom": false,
-  "showHelpDialog": false,
   "showHyperlinkPopup": false,
   "showStats": false,
+  "showWelcomeScreen": true,
   "startBoundElement": null,
   "suggestedBindings": Array [],
   "theme": "light",
-  "toastMessage": "Added to library",
+  "toast": Object {
+    "message": "Added to library",
+  },
   "viewBackgroundColor": "#ffffff",
   "viewModeEnabled": false,
   "width": 200,
@@ -348,7 +356,7 @@ Object {
 
 exports[`contextMenu element selecting 'Add to library' in context menu adds element to library: [end of test] number of elements 1`] = `1`;
 
-exports[`contextMenu element selecting 'Add to library' in context menu adds element to library: [end of test] number of renders 1`] = `10`;
+exports[`contextMenu element selecting 'Add to library' in context menu adds element to library: [end of test] number of renders 1`] = `11`;
 
 exports[`contextMenu element selecting 'Bring forward' in context menu brings element forward: [end of test] appState 1`] = `
 Object {
@@ -388,24 +396,26 @@ Object {
   "gridSize": null,
   "height": 100,
   "isBindingEnabled": true,
-  "isLibraryOpen": false,
   "isLoading": false,
   "isResizing": false,
   "isRotating": false,
+  "isSidebarDocked": false,
   "lastPointerDownWith": "mouse",
   "multiElement": null,
   "name": "Untitled-201933152653",
   "offsetLeft": 20,
   "offsetTop": 10,
+  "openDialog": null,
   "openMenu": null,
   "openPopup": null,
+  "openSidebar": null,
   "pasteDialog": Object {
     "data": null,
     "shown": false,
   },
   "penDetected": false,
   "penMode": false,
-  "pendingImageElement": null,
+  "pendingImageElementId": null,
   "previousSelectedElementIds": Object {},
   "resizingElement": null,
   "scrollX": 0,
@@ -415,15 +425,16 @@ Object {
     "id0": true,
   },
   "selectedGroupIds": Object {},
+  "selectedLinearElement": null,
   "selectionElement": null,
   "shouldCacheIgnoreZoom": false,
-  "showHelpDialog": false,
   "showHyperlinkPopup": false,
   "showStats": false,
+  "showWelcomeScreen": true,
   "startBoundElement": null,
   "suggestedBindings": Array [],
   "theme": "light",
-  "toastMessage": null,
+  "toast": null,
   "viewBackgroundColor": "#ffffff",
   "viewModeEnabled": false,
   "width": 200,
@@ -686,7 +697,7 @@ Object {
 
 exports[`contextMenu element selecting 'Bring forward' in context menu brings element forward: [end of test] number of elements 1`] = `2`;
 
-exports[`contextMenu element selecting 'Bring forward' in context menu brings element forward: [end of test] number of renders 1`] = `15`;
+exports[`contextMenu element selecting 'Bring forward' in context menu brings element forward: [end of test] number of renders 1`] = `16`;
 
 exports[`contextMenu element selecting 'Bring to front' in context menu brings element to front: [end of test] appState 1`] = `
 Object {
@@ -726,24 +737,26 @@ Object {
   "gridSize": null,
   "height": 100,
   "isBindingEnabled": true,
-  "isLibraryOpen": false,
   "isLoading": false,
   "isResizing": false,
   "isRotating": false,
+  "isSidebarDocked": false,
   "lastPointerDownWith": "mouse",
   "multiElement": null,
   "name": "Untitled-201933152653",
   "offsetLeft": 20,
   "offsetTop": 10,
+  "openDialog": null,
   "openMenu": null,
   "openPopup": null,
+  "openSidebar": null,
   "pasteDialog": Object {
     "data": null,
     "shown": false,
   },
   "penDetected": false,
   "penMode": false,
-  "pendingImageElement": null,
+  "pendingImageElementId": null,
   "previousSelectedElementIds": Object {},
   "resizingElement": null,
   "scrollX": 0,
@@ -753,15 +766,16 @@ Object {
     "id0": true,
   },
   "selectedGroupIds": Object {},
+  "selectedLinearElement": null,
   "selectionElement": null,
   "shouldCacheIgnoreZoom": false,
-  "showHelpDialog": false,
   "showHyperlinkPopup": false,
   "showStats": false,
+  "showWelcomeScreen": true,
   "startBoundElement": null,
   "suggestedBindings": Array [],
   "theme": "light",
-  "toastMessage": null,
+  "toast": null,
   "viewBackgroundColor": "#ffffff",
   "viewModeEnabled": false,
   "width": 200,
@@ -1024,7 +1038,7 @@ Object {
 
 exports[`contextMenu element selecting 'Bring to front' in context menu brings element to front: [end of test] number of elements 1`] = `2`;
 
-exports[`contextMenu element selecting 'Bring to front' in context menu brings element to front: [end of test] number of renders 1`] = `15`;
+exports[`contextMenu element selecting 'Bring to front' in context menu brings element to front: [end of test] number of renders 1`] = `16`;
 
 exports[`contextMenu element selecting 'Copy styles' in context menu copies styles: [end of test] appState 1`] = `
 Object {
@@ -1064,24 +1078,26 @@ Object {
   "gridSize": null,
   "height": 100,
   "isBindingEnabled": true,
-  "isLibraryOpen": false,
   "isLoading": false,
   "isResizing": false,
   "isRotating": false,
+  "isSidebarDocked": false,
   "lastPointerDownWith": "mouse",
   "multiElement": null,
   "name": "Untitled-201933152653",
   "offsetLeft": 20,
   "offsetTop": 10,
+  "openDialog": null,
   "openMenu": null,
   "openPopup": null,
+  "openSidebar": null,
   "pasteDialog": Object {
     "data": null,
     "shown": false,
   },
   "penDetected": false,
   "penMode": false,
-  "pendingImageElement": null,
+  "pendingImageElementId": null,
   "previousSelectedElementIds": Object {},
   "resizingElement": null,
   "scrollX": 0,
@@ -1091,15 +1107,18 @@ Object {
     "id0": true,
   },
   "selectedGroupIds": Object {},
+  "selectedLinearElement": null,
   "selectionElement": null,
   "shouldCacheIgnoreZoom": false,
-  "showHelpDialog": false,
   "showHyperlinkPopup": false,
   "showStats": false,
+  "showWelcomeScreen": true,
   "startBoundElement": null,
   "suggestedBindings": Array [],
   "theme": "light",
-  "toastMessage": "Copied styles.",
+  "toast": Object {
+    "message": "Copied styles.",
+  },
   "viewBackgroundColor": "#ffffff",
   "viewModeEnabled": false,
   "width": 200,
@@ -1201,7 +1220,7 @@ Object {
 
 exports[`contextMenu element selecting 'Copy styles' in context menu copies styles: [end of test] number of elements 1`] = `1`;
 
-exports[`contextMenu element selecting 'Copy styles' in context menu copies styles: [end of test] number of renders 1`] = `10`;
+exports[`contextMenu element selecting 'Copy styles' in context menu copies styles: [end of test] number of renders 1`] = `11`;
 
 exports[`contextMenu element selecting 'Delete' in context menu deletes element: [end of test] appState 1`] = `
 Object {
@@ -1241,24 +1260,26 @@ Object {
   "gridSize": null,
   "height": 100,
   "isBindingEnabled": true,
-  "isLibraryOpen": false,
   "isLoading": false,
   "isResizing": false,
   "isRotating": false,
+  "isSidebarDocked": false,
   "lastPointerDownWith": "mouse",
   "multiElement": null,
   "name": "Untitled-201933152653",
   "offsetLeft": 20,
   "offsetTop": 10,
+  "openDialog": null,
   "openMenu": null,
   "openPopup": null,
+  "openSidebar": null,
   "pasteDialog": Object {
     "data": null,
     "shown": false,
   },
   "penDetected": false,
   "penMode": false,
-  "pendingImageElement": null,
+  "pendingImageElementId": null,
   "previousSelectedElementIds": Object {},
   "resizingElement": null,
   "scrollX": 0,
@@ -1266,15 +1287,16 @@ Object {
   "scrolledOutside": false,
   "selectedElementIds": Object {},
   "selectedGroupIds": Object {},
+  "selectedLinearElement": null,
   "selectionElement": null,
   "shouldCacheIgnoreZoom": false,
-  "showHelpDialog": false,
   "showHyperlinkPopup": false,
   "showStats": false,
+  "showWelcomeScreen": true,
   "startBoundElement": null,
   "suggestedBindings": Array [],
   "theme": "light",
-  "toastMessage": null,
+  "toast": null,
   "viewBackgroundColor": "#ffffff",
   "viewModeEnabled": false,
   "width": 200,
@@ -1299,7 +1321,7 @@ Object {
   "locked": false,
   "opacity": 100,
   "roughness": 1,
-  "seed": 1278240551,
+  "seed": 337897,
   "strokeColor": "#000000",
   "strokeSharpness": "sharp",
   "strokeStyle": "solid",
@@ -1307,7 +1329,7 @@ Object {
   "type": "rectangle",
   "updated": 1,
   "version": 3,
-  "versionNonce": 453191,
+  "versionNonce": 449462985,
   "width": 20,
   "x": -10,
   "y": 0,
@@ -1355,7 +1377,7 @@ Object {
           "locked": false,
           "opacity": 100,
           "roughness": 1,
-          "seed": 1278240551,
+          "seed": 337897,
           "strokeColor": "#000000",
           "strokeSharpness": "sharp",
           "strokeStyle": "solid",
@@ -1363,7 +1385,7 @@ Object {
           "type": "rectangle",
           "updated": 1,
           "version": 2,
-          "versionNonce": 449462985,
+          "versionNonce": 1278240551,
           "width": 20,
           "x": -10,
           "y": 0,
@@ -1393,7 +1415,7 @@ Object {
           "locked": false,
           "opacity": 100,
           "roughness": 1,
-          "seed": 1278240551,
+          "seed": 337897,
           "strokeColor": "#000000",
           "strokeSharpness": "sharp",
           "strokeStyle": "solid",
@@ -1401,7 +1423,7 @@ Object {
           "type": "rectangle",
           "updated": 1,
           "version": 3,
-          "versionNonce": 453191,
+          "versionNonce": 449462985,
           "width": 20,
           "x": -10,
           "y": 0,
@@ -1414,7 +1436,7 @@ Object {
 
 exports[`contextMenu element selecting 'Delete' in context menu deletes element: [end of test] number of elements 1`] = `1`;
 
-exports[`contextMenu element selecting 'Delete' in context menu deletes element: [end of test] number of renders 1`] = `10`;
+exports[`contextMenu element selecting 'Delete' in context menu deletes element: [end of test] number of renders 1`] = `11`;
 
 exports[`contextMenu element selecting 'Duplicate' in context menu duplicates element: [end of test] appState 1`] = `
 Object {
@@ -1454,24 +1476,26 @@ Object {
   "gridSize": null,
   "height": 100,
   "isBindingEnabled": true,
-  "isLibraryOpen": false,
   "isLoading": false,
   "isResizing": false,
   "isRotating": false,
+  "isSidebarDocked": false,
   "lastPointerDownWith": "mouse",
   "multiElement": null,
   "name": "Untitled-201933152653",
   "offsetLeft": 20,
   "offsetTop": 10,
+  "openDialog": null,
   "openMenu": null,
   "openPopup": null,
+  "openSidebar": null,
   "pasteDialog": Object {
     "data": null,
     "shown": false,
   },
   "penDetected": false,
   "penMode": false,
-  "pendingImageElement": null,
+  "pendingImageElementId": null,
   "previousSelectedElementIds": Object {},
   "resizingElement": null,
   "scrollX": 0,
@@ -1481,15 +1505,16 @@ Object {
     "id0_copy": true,
   },
   "selectedGroupIds": Object {},
+  "selectedLinearElement": null,
   "selectionElement": null,
   "shouldCacheIgnoreZoom": false,
-  "showHelpDialog": false,
   "showHyperlinkPopup": false,
   "showStats": false,
+  "showWelcomeScreen": true,
   "startBoundElement": null,
   "suggestedBindings": Array [],
   "theme": "light",
-  "toastMessage": null,
+  "toast": null,
   "viewBackgroundColor": "#ffffff",
   "viewModeEnabled": false,
   "width": 200,
@@ -1686,7 +1711,7 @@ Object {
 
 exports[`contextMenu element selecting 'Duplicate' in context menu duplicates element: [end of test] number of elements 1`] = `2`;
 
-exports[`contextMenu element selecting 'Duplicate' in context menu duplicates element: [end of test] number of renders 1`] = `10`;
+exports[`contextMenu element selecting 'Duplicate' in context menu duplicates element: [end of test] number of renders 1`] = `11`;
 
 exports[`contextMenu element selecting 'Group selection' in context menu groups selected elements: [end of test] appState 1`] = `
 Object {
@@ -1726,24 +1751,26 @@ Object {
   "gridSize": null,
   "height": 100,
   "isBindingEnabled": true,
-  "isLibraryOpen": false,
   "isLoading": false,
   "isResizing": false,
   "isRotating": false,
+  "isSidebarDocked": false,
   "lastPointerDownWith": "mouse",
   "multiElement": null,
   "name": "Untitled-201933152653",
   "offsetLeft": 20,
   "offsetTop": 10,
+  "openDialog": null,
   "openMenu": null,
   "openPopup": null,
+  "openSidebar": null,
   "pasteDialog": Object {
     "data": null,
     "shown": false,
   },
   "penDetected": false,
   "penMode": false,
-  "pendingImageElement": null,
+  "pendingImageElementId": null,
   "previousSelectedElementIds": Object {
     "id1": true,
   },
@@ -1759,15 +1786,16 @@ Object {
   "selectedGroupIds": Object {
     "id3": true,
   },
+  "selectedLinearElement": null,
   "selectionElement": null,
   "shouldCacheIgnoreZoom": false,
-  "showHelpDialog": false,
   "showHyperlinkPopup": false,
   "showStats": false,
+  "showWelcomeScreen": true,
   "startBoundElement": null,
   "suggestedBindings": Array [],
   "theme": "light",
-  "toastMessage": null,
+  "toast": null,
   "viewBackgroundColor": "#ffffff",
   "viewModeEnabled": false,
   "width": 200,
@@ -2042,7 +2070,7 @@ Object {
 
 exports[`contextMenu element selecting 'Group selection' in context menu groups selected elements: [end of test] number of elements 1`] = `2`;
 
-exports[`contextMenu element selecting 'Group selection' in context menu groups selected elements: [end of test] number of renders 1`] = `16`;
+exports[`contextMenu element selecting 'Group selection' in context menu groups selected elements: [end of test] number of renders 1`] = `17`;
 
 exports[`contextMenu element selecting 'Paste styles' in context menu pastes styles: [end of test] appState 1`] = `
 Object {
@@ -2082,24 +2110,26 @@ Object {
   "gridSize": null,
   "height": 100,
   "isBindingEnabled": true,
-  "isLibraryOpen": false,
   "isLoading": false,
   "isResizing": false,
   "isRotating": false,
+  "isSidebarDocked": false,
   "lastPointerDownWith": "mouse",
   "multiElement": null,
   "name": "Untitled-201933152653",
   "offsetLeft": 20,
   "offsetTop": 10,
+  "openDialog": null,
   "openMenu": null,
   "openPopup": "backgroundColorPicker",
+  "openSidebar": null,
   "pasteDialog": Object {
     "data": null,
     "shown": false,
   },
   "penDetected": false,
   "penMode": false,
-  "pendingImageElement": null,
+  "pendingImageElementId": null,
   "previousSelectedElementIds": Object {},
   "resizingElement": null,
   "scrollX": 0,
@@ -2109,15 +2139,18 @@ Object {
     "id0": true,
   },
   "selectedGroupIds": Object {},
+  "selectedLinearElement": null,
   "selectionElement": null,
   "shouldCacheIgnoreZoom": false,
-  "showHelpDialog": false,
   "showHyperlinkPopup": false,
   "showStats": false,
+  "showWelcomeScreen": true,
   "startBoundElement": null,
   "suggestedBindings": Array [],
   "theme": "light",
-  "toastMessage": "Copied styles.",
+  "toast": Object {
+    "message": "Copied styles.",
+  },
   "viewBackgroundColor": "#ffffff",
   "viewModeEnabled": false,
   "width": 200,
@@ -2842,7 +2875,7 @@ Object {
 
 exports[`contextMenu element selecting 'Paste styles' in context menu pastes styles: [end of test] number of elements 1`] = `2`;
 
-exports[`contextMenu element selecting 'Paste styles' in context menu pastes styles: [end of test] number of renders 1`] = `27`;
+exports[`contextMenu element selecting 'Paste styles' in context menu pastes styles: [end of test] number of renders 1`] = `28`;
 
 exports[`contextMenu element selecting 'Send backward' in context menu sends element backward: [end of test] appState 1`] = `
 Object {
@@ -2882,24 +2915,26 @@ Object {
   "gridSize": null,
   "height": 100,
   "isBindingEnabled": true,
-  "isLibraryOpen": false,
   "isLoading": false,
   "isResizing": false,
   "isRotating": false,
+  "isSidebarDocked": false,
   "lastPointerDownWith": "mouse",
   "multiElement": null,
   "name": "Untitled-201933152653",
   "offsetLeft": 20,
   "offsetTop": 10,
+  "openDialog": null,
   "openMenu": null,
   "openPopup": null,
+  "openSidebar": null,
   "pasteDialog": Object {
     "data": null,
     "shown": false,
   },
   "penDetected": false,
   "penMode": false,
-  "pendingImageElement": null,
+  "pendingImageElementId": null,
   "previousSelectedElementIds": Object {},
   "resizingElement": null,
   "scrollX": 0,
@@ -2909,15 +2944,16 @@ Object {
     "id1": true,
   },
   "selectedGroupIds": Object {},
+  "selectedLinearElement": null,
   "selectionElement": null,
   "shouldCacheIgnoreZoom": false,
-  "showHelpDialog": false,
   "showHyperlinkPopup": false,
   "showStats": false,
+  "showWelcomeScreen": true,
   "startBoundElement": null,
   "suggestedBindings": Array [],
   "theme": "light",
-  "toastMessage": null,
+  "toast": null,
   "viewBackgroundColor": "#ffffff",
   "viewModeEnabled": false,
   "width": 200,
@@ -3180,7 +3216,7 @@ Object {
 
 exports[`contextMenu element selecting 'Send backward' in context menu sends element backward: [end of test] number of elements 1`] = `2`;
 
-exports[`contextMenu element selecting 'Send backward' in context menu sends element backward: [end of test] number of renders 1`] = `14`;
+exports[`contextMenu element selecting 'Send backward' in context menu sends element backward: [end of test] number of renders 1`] = `15`;
 
 exports[`contextMenu element selecting 'Send to back' in context menu sends element to back: [end of test] appState 1`] = `
 Object {
@@ -3220,24 +3256,26 @@ Object {
   "gridSize": null,
   "height": 100,
   "isBindingEnabled": true,
-  "isLibraryOpen": false,
   "isLoading": false,
   "isResizing": false,
   "isRotating": false,
+  "isSidebarDocked": false,
   "lastPointerDownWith": "mouse",
   "multiElement": null,
   "name": "Untitled-201933152653",
   "offsetLeft": 20,
   "offsetTop": 10,
+  "openDialog": null,
   "openMenu": null,
   "openPopup": null,
+  "openSidebar": null,
   "pasteDialog": Object {
     "data": null,
     "shown": false,
   },
   "penDetected": false,
   "penMode": false,
-  "pendingImageElement": null,
+  "pendingImageElementId": null,
   "previousSelectedElementIds": Object {},
   "resizingElement": null,
   "scrollX": 0,
@@ -3247,15 +3285,16 @@ Object {
     "id1": true,
   },
   "selectedGroupIds": Object {},
+  "selectedLinearElement": null,
   "selectionElement": null,
   "shouldCacheIgnoreZoom": false,
-  "showHelpDialog": false,
   "showHyperlinkPopup": false,
   "showStats": false,
+  "showWelcomeScreen": true,
   "startBoundElement": null,
   "suggestedBindings": Array [],
   "theme": "light",
-  "toastMessage": null,
+  "toast": null,
   "viewBackgroundColor": "#ffffff",
   "viewModeEnabled": false,
   "width": 200,
@@ -3518,7 +3557,7 @@ Object {
 
 exports[`contextMenu element selecting 'Send to back' in context menu sends element to back: [end of test] number of elements 1`] = `2`;
 
-exports[`contextMenu element selecting 'Send to back' in context menu sends element to back: [end of test] number of renders 1`] = `14`;
+exports[`contextMenu element selecting 'Send to back' in context menu sends element to back: [end of test] number of renders 1`] = `15`;
 
 exports[`contextMenu element selecting 'Ungroup selection' in context menu ungroups selected group: [end of test] appState 1`] = `
 Object {
@@ -3558,24 +3597,26 @@ Object {
   "gridSize": null,
   "height": 100,
   "isBindingEnabled": true,
-  "isLibraryOpen": false,
   "isLoading": false,
   "isResizing": false,
   "isRotating": false,
+  "isSidebarDocked": false,
   "lastPointerDownWith": "mouse",
   "multiElement": null,
   "name": "Untitled-201933152653",
   "offsetLeft": 20,
   "offsetTop": 10,
+  "openDialog": null,
   "openMenu": null,
   "openPopup": null,
+  "openSidebar": null,
   "pasteDialog": Object {
     "data": null,
     "shown": false,
   },
   "penDetected": false,
   "penMode": false,
-  "pendingImageElement": null,
+  "pendingImageElementId": null,
   "previousSelectedElementIds": Object {
     "id1": true,
   },
@@ -3589,15 +3630,16 @@ Object {
     "id2": true,
   },
   "selectedGroupIds": Object {},
+  "selectedLinearElement": null,
   "selectionElement": null,
   "shouldCacheIgnoreZoom": false,
-  "showHelpDialog": false,
   "showHyperlinkPopup": false,
   "showStats": false,
+  "showWelcomeScreen": true,
   "startBoundElement": null,
   "suggestedBindings": Array [],
   "theme": "light",
-  "toastMessage": null,
+  "toast": null,
   "viewBackgroundColor": "#ffffff",
   "viewModeEnabled": false,
   "width": 200,
@@ -3936,7 +3978,7 @@ Object {
 
 exports[`contextMenu element selecting 'Ungroup selection' in context menu ungroups selected group: [end of test] number of elements 1`] = `2`;
 
-exports[`contextMenu element selecting 'Ungroup selection' in context menu ungroups selected group: [end of test] number of renders 1`] = `17`;
+exports[`contextMenu element selecting 'Ungroup selection' in context menu ungroups selected group: [end of test] number of renders 1`] = `18`;
 
 exports[`contextMenu element shows 'Group selection' in context menu for multiple selected elements: [end of test] appState 1`] = `
 Object {
@@ -3976,24 +4018,26 @@ Object {
   "gridSize": null,
   "height": 100,
   "isBindingEnabled": true,
-  "isLibraryOpen": false,
   "isLoading": false,
   "isResizing": false,
   "isRotating": false,
+  "isSidebarDocked": false,
   "lastPointerDownWith": "mouse",
   "multiElement": null,
   "name": "Untitled-201933152653",
   "offsetLeft": 20,
   "offsetTop": 10,
+  "openDialog": null,
   "openMenu": null,
   "openPopup": null,
+  "openSidebar": null,
   "pasteDialog": Object {
     "data": null,
     "shown": false,
   },
   "penDetected": false,
   "penMode": false,
-  "pendingImageElement": null,
+  "pendingImageElementId": null,
   "previousSelectedElementIds": Object {
     "id0": true,
     "id2": true,
@@ -4009,15 +4053,16 @@ Object {
     "id3": true,
   },
   "selectedGroupIds": Object {},
+  "selectedLinearElement": null,
   "selectionElement": null,
   "shouldCacheIgnoreZoom": false,
-  "showHelpDialog": false,
   "showHyperlinkPopup": false,
   "showStats": false,
+  "showWelcomeScreen": true,
   "startBoundElement": null,
   "suggestedBindings": Array [],
   "theme": "light",
-  "toastMessage": null,
+  "toast": null,
   "viewBackgroundColor": "#ffffff",
   "viewModeEnabled": false,
   "width": 200,
@@ -4214,7 +4259,7 @@ Object {
 
 exports[`contextMenu element shows 'Group selection' in context menu for multiple selected elements: [end of test] number of elements 1`] = `2`;
 
-exports[`contextMenu element shows 'Group selection' in context menu for multiple selected elements: [end of test] number of renders 1`] = `17`;
+exports[`contextMenu element shows 'Group selection' in context menu for multiple selected elements: [end of test] number of renders 1`] = `18`;
 
 exports[`contextMenu element shows 'Ungroup selection' in context menu for group inside selected elements: [end of test] appState 1`] = `
 Object {
@@ -4254,24 +4299,26 @@ Object {
   "gridSize": null,
   "height": 100,
   "isBindingEnabled": true,
-  "isLibraryOpen": false,
   "isLoading": false,
   "isResizing": false,
   "isRotating": false,
+  "isSidebarDocked": false,
   "lastPointerDownWith": "mouse",
   "multiElement": null,
   "name": "Untitled-201933152653",
   "offsetLeft": 20,
   "offsetTop": 10,
+  "openDialog": null,
   "openMenu": null,
   "openPopup": null,
+  "openSidebar": null,
   "pasteDialog": Object {
     "data": null,
     "shown": false,
   },
   "penDetected": false,
   "penMode": false,
-  "pendingImageElement": null,
+  "pendingImageElementId": null,
   "previousSelectedElementIds": Object {
     "id0": true,
     "id2": true,
@@ -4289,15 +4336,16 @@ Object {
   "selectedGroupIds": Object {
     "id4": true,
   },
+  "selectedLinearElement": null,
   "selectionElement": null,
   "shouldCacheIgnoreZoom": false,
-  "showHelpDialog": false,
   "showHyperlinkPopup": false,
   "showStats": false,
+  "showWelcomeScreen": true,
   "startBoundElement": null,
   "suggestedBindings": Array [],
   "theme": "light",
-  "toastMessage": null,
+  "toast": null,
   "viewBackgroundColor": "#ffffff",
   "viewModeEnabled": false,
   "width": 200,
@@ -4573,7 +4621,7 @@ Object {
 
 exports[`contextMenu element shows 'Ungroup selection' in context menu for group inside selected elements: [end of test] number of elements 1`] = `2`;
 
-exports[`contextMenu element shows 'Ungroup selection' in context menu for group inside selected elements: [end of test] number of renders 1`] = `18`;
+exports[`contextMenu element shows 'Ungroup selection' in context menu for group inside selected elements: [end of test] number of renders 1`] = `19`;
 
 exports[`contextMenu element shows context menu for canvas: [end of test] appState 1`] = `
 Object {
@@ -4613,24 +4661,26 @@ Object {
   "gridSize": null,
   "height": 100,
   "isBindingEnabled": true,
-  "isLibraryOpen": false,
   "isLoading": false,
   "isResizing": false,
   "isRotating": false,
+  "isSidebarDocked": false,
   "lastPointerDownWith": "mouse",
   "multiElement": null,
   "name": "Untitled-201933152653",
   "offsetLeft": 20,
   "offsetTop": 10,
+  "openDialog": null,
   "openMenu": null,
   "openPopup": null,
+  "openSidebar": null,
   "pasteDialog": Object {
     "data": null,
     "shown": false,
   },
   "penDetected": false,
   "penMode": false,
-  "pendingImageElement": null,
+  "pendingImageElementId": null,
   "previousSelectedElementIds": Object {},
   "resizingElement": null,
   "scrollX": 0,
@@ -4638,15 +4688,16 @@ Object {
   "scrolledOutside": false,
   "selectedElementIds": Object {},
   "selectedGroupIds": Object {},
+  "selectedLinearElement": null,
   "selectionElement": null,
   "shouldCacheIgnoreZoom": false,
-  "showHelpDialog": false,
   "showHyperlinkPopup": false,
   "showStats": false,
+  "showWelcomeScreen": true,
   "startBoundElement": null,
   "suggestedBindings": Array [],
   "theme": "light",
-  "toastMessage": null,
+  "toast": null,
   "viewBackgroundColor": "#ffffff",
   "viewModeEnabled": false,
   "width": 200,
@@ -4679,7 +4730,7 @@ Object {
 
 exports[`contextMenu element shows context menu for canvas: [end of test] number of elements 1`] = `0`;
 
-exports[`contextMenu element shows context menu for canvas: [end of test] number of renders 1`] = `3`;
+exports[`contextMenu element shows context menu for canvas: [end of test] number of renders 1`] = `4`;
 
 exports[`contextMenu element shows context menu for element: [end of test] appState 1`] = `
 Object {
@@ -4719,24 +4770,26 @@ Object {
   "gridSize": null,
   "height": 100,
   "isBindingEnabled": true,
-  "isLibraryOpen": false,
   "isLoading": false,
   "isResizing": false,
   "isRotating": false,
+  "isSidebarDocked": false,
   "lastPointerDownWith": "mouse",
   "multiElement": null,
   "name": "Untitled-201933152653",
   "offsetLeft": 20,
   "offsetTop": 10,
+  "openDialog": null,
   "openMenu": null,
   "openPopup": null,
+  "openSidebar": null,
   "pasteDialog": Object {
     "data": null,
     "shown": false,
   },
   "penDetected": false,
   "penMode": false,
-  "pendingImageElement": null,
+  "pendingImageElementId": null,
   "previousSelectedElementIds": Object {},
   "resizingElement": null,
   "scrollX": 0,
@@ -4746,15 +4799,16 @@ Object {
     "id0": true,
   },
   "selectedGroupIds": Object {},
+  "selectedLinearElement": null,
   "selectionElement": null,
   "shouldCacheIgnoreZoom": false,
-  "showHelpDialog": false,
   "showHyperlinkPopup": false,
   "showStats": false,
+  "showWelcomeScreen": true,
   "startBoundElement": null,
   "suggestedBindings": Array [],
   "theme": "light",
-  "toastMessage": null,
+  "toast": null,
   "viewBackgroundColor": "#ffffff",
   "viewModeEnabled": false,
   "width": 200,
@@ -4803,24 +4857,26 @@ Object {
   "gridSize": null,
   "height": 100,
   "isBindingEnabled": true,
-  "isLibraryOpen": false,
   "isLoading": false,
   "isResizing": false,
   "isRotating": false,
+  "isSidebarDocked": false,
   "lastPointerDownWith": "mouse",
   "multiElement": null,
   "name": "Untitled-201933152653",
   "offsetLeft": 20,
   "offsetTop": 10,
+  "openDialog": null,
   "openMenu": null,
   "openPopup": null,
+  "openSidebar": null,
   "pasteDialog": Object {
     "data": null,
     "shown": false,
   },
   "penDetected": false,
   "penMode": false,
-  "pendingImageElement": null,
+  "pendingImageElementId": null,
   "previousSelectedElementIds": Object {},
   "resizingElement": null,
   "scrollX": 0,
@@ -4830,15 +4886,16 @@ Object {
     "id1": true,
   },
   "selectedGroupIds": Object {},
+  "selectedLinearElement": null,
   "selectionElement": null,
   "shouldCacheIgnoreZoom": false,
-  "showHelpDialog": false,
   "showHyperlinkPopup": false,
   "showStats": false,
+  "showWelcomeScreen": true,
   "startBoundElement": null,
   "suggestedBindings": Array [],
   "theme": "light",
-  "toastMessage": null,
+  "toast": null,
   "viewBackgroundColor": "#ffffff",
   "viewModeEnabled": false,
   "width": 200,
@@ -5020,6 +5077,6 @@ exports[`contextMenu element shows context menu for element: [end of test] numbe
 
 exports[`contextMenu element shows context menu for element: [end of test] number of elements 2`] = `2`;
 
-exports[`contextMenu element shows context menu for element: [end of test] number of renders 1`] = `9`;
+exports[`contextMenu element shows context menu for element: [end of test] number of renders 1`] = `10`;
 
-exports[`contextMenu element shows context menu for element: [end of test] number of renders 2`] = `6`;
+exports[`contextMenu element shows context menu for element: [end of test] number of renders 2`] = `7`;

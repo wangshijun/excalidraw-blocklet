@@ -89,8 +89,8 @@
     "align": "Hizala",
     "alignTop": "Yukarı hizala",
     "alignBottom": "Aşağı hizala",
-    "alignLeft": "Sola yasla",
-    "alignRight": "Sağa yasla",
+    "alignLeft": "Sola hizala",
+    "alignRight": "Sağa hizala",
     "centerVertically": "Dikeyde ortala",
     "centerHorizontally": "Yatayda ortala",
     "distributeHorizontally": "Yatay dağıt",
@@ -114,13 +114,23 @@
       "create": "Bağlantı oluştur",
       "label": "Bağlantı"
     },
+    "lineEditor": {
+      "edit": "Çizgiyi düzenle",
+      "exit": "Çizgi düzenlemeden çık"
+    },
     "elementLock": {
       "lock": "Kilitle",
       "unlock": "Kilidi Kaldır",
       "lockAll": "Hepsini kilitle",
       "unlockAll": "Hepsinin kilidini kaldır"
     },
-    "statusPublished": "Yayınlandı"
+    "statusPublished": "Yayınlandı",
+    "sidebarLock": "Kenar çubuğu açık kalsın"
+  },
+  "library": {
+    "noItems": "Öğe eklenmedi...",
+    "hint_emptyLibrary": "Öğelerden birini eklemek için öğeyi seçiniz veya aşağıdaki genel kütüphaneden öğeleri ekleyin.",
+    "hint_emptyPrivateLibrary": "Tuvalden bir eleman seçerek sayfaya ekleyin."
   },
   "buttons": {
     "clearReset": "Tuvali sıfırla",

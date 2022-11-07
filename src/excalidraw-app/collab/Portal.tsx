@@ -4,7 +4,7 @@ import {
   SocketUpdateDataSource,
 } from "../data";
 
-import CollabWrapper from "./CollabWrapper";
+import { TCollabClass } from "./Collab";
 
 import { ExcalidrawElement } from "../../element/types";
 import {
@@ -14,20 +14,21 @@ import {
 } from "../app_constants";
 import { UserIdleState } from "../../types";
 import { trackEvent } from "../../analytics";
-import { throttle } from "lodash";
+import throttle from "lodash.throttle";
 import { newElementWith } from "../../element/mutateElement";
 import { BroadcastedExcalidrawElement } from "./reconciliation";
 import { encryptData } from "../../data/encryption";
+import { PRECEDING_ELEMENT_KEY } from "../../constants";
 
 class Portal {
-  collab: CollabWrapper;
+  collab: TCollabClass;
   socket: SocketIOClient.Socket | null = null;
   socketInitialized: boolean = false; // we don't want the socket to emit any updates until it is fully initialized
   roomId: string | null = null;
   roomKey: string | null = null;
   broadcastedElementVersions: Map<string, number> = new Map();
 
-  constructor(collab: CollabWrapper) {
+  constructor(collab: TCollabClass) {
     this.collab = collab;
   }
 
@@ -152,7 +153,7 @@ class Portal {
           acc.push({
             ...element,
             // z-index info for the reconciler
-            parent: idx === 0 ? "^" : elements[idx - 1]?.id,
+            [PRECEDING_ELEMENT_KEY]: idx === 0 ? "^" : elements[idx - 1]?.id,
           });
         }
         return acc;
