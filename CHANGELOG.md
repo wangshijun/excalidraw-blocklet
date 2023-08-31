@@ -1,3 +1,7 @@
+## 0.7.1 (August 31, 2023)
+
+- fix: blocklet open graph
+
 ## 0.7.0 (August 31, 2023)
 
 - chore: merge with latest excalidraw, v0.15.0
