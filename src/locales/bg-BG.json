@@ -1,6 +1,7 @@
 {
   "labels": {
     "paste": "Постави",
+    "pasteAsPlaintext": "",
     "pasteCharts": "Постави графики",
     "selectAll": "Маркирай всичко",
     "multiSelect": "Добави елемент към селекция",
@@ -109,6 +110,7 @@
     "increaseFontSize": "",
     "unbindText": "",
     "bindText": "",
+    "createContainerFromText": "",
     "link": {
       "edit": "",
       "create": "",
@@ -135,8 +137,8 @@
   "buttons": {
     "clearReset": "Нулиране на платно",
     "exportJSON": "",
-    "exportImage": "Запиши като изображение",
-    "export": "Експортиране",
+    "exportImage": "",
+    "export": "",
     "exportToPng": "Изнасяне в PNG",
     "exportToSvg": "Изнасяне в SVG",
     "copyToClipboard": "Копиране в клипборда",
@@ -144,7 +146,7 @@
     "scale": "Мащаб",
     "save": "",
     "saveAs": "Запиши като",
-    "load": "Зареждане",
+    "load": "",
     "getShareableLink": "Получаване на връзка за споделяне",
     "close": "Затвори",
     "selectLanguage": "Избор на език",
@@ -191,7 +193,8 @@
     "invalidSceneUrl": "",
     "resetLibrary": "",
     "removeItemsFromsLibrary": "",
-    "invalidEncryptionKey": ""
+    "invalidEncryptionKey": "",
+    "collabOfflineWarning": ""
   },
   "errors": {
     "unsupportedFileType": "Този файлов формат не се поддържа.",
@@ -200,7 +203,24 @@
     "svgImageInsertError": "",
     "invalidSVGString": "",
     "cannotResolveCollabServer": "",
-    "importLibraryError": ""
+    "importLibraryError": "",
+    "collabSaveFailed": "",
+    "collabSaveFailed_sizeExceeded": "",
+    "brave_measure_text_error": {
+      "start": "",
+      "aggressive_block_fingerprint": "",
+      "setting_enabled": "",
+      "break": "",
+      "text_elements": "",
+      "in_your_drawings": "",
+      "strongly_recommend": "",
+      "steps": "",
+      "how": "",
+      "disable_setting": "",
+      "issue": "",
+      "write": "",
+      "discord": ""
+    }
   },
   "toolBar": {
     "selection": "Селекция",
@@ -216,7 +236,8 @@
     "lock": "Поддържайте избрания инструмент активен след рисуване",
     "penMode": "",
     "link": "",
-    "eraser": ""
+    "eraser": "",
+    "hand": ""
   },
   "headings": {
     "canvasActions": "Действия по платното",
@@ -235,14 +256,15 @@
     "resize": "Може да ограничите при преоразмеряване като задържите SHIFT,\nзадръжте ALT за преоразмерите през центъра",
     "resizeImage": "",
     "rotate": "Можете да ограничите ъглите, като държите SHIFT, докато се въртите",
-    "lineEditor_info": "Кликнете два пъти или натиснете Enter за да промените точките",
+    "lineEditor_info": "",
     "lineEditor_pointSelected": "Натиснете Delete за да изтриете точка(и), CtrlOrCmd+D за дуплициране, или извлачете за да преместите",
     "lineEditor_nothingSelected": "",
     "placeImage": "",
     "publishLibrary": "",
     "bindTextToElement": "Натиснете Enter, за да добавите",
     "deepBoxSelect": "",
-    "eraserRevert": ""
+    "eraserRevert": "",
+    "firefox_clipboard_write": ""
   },
   "canvasError": {
     "cannotShowPreview": "Невъзможност за показване на preview",
@@ -297,7 +319,8 @@
     "doubleClick": "",
     "drag": "плъзнете",
     "editor": "Редактор",
-    "editSelectedShape": "",
+    "editLineArrowPoints": "",
+    "editText": "",
     "github": "Намерихте проблем? Изпратете",
     "howto": "Следвайте нашите ръководства",
     "or": "или",
@@ -310,7 +333,9 @@
     "view": "Преглед",
     "zoomToFit": "Приближи докато се виждат всички елементи",
     "zoomToSelection": "Приближи селекцията",
-    "toggleElementLock": ""
+    "toggleElementLock": "",
+    "movePageUpDown": "",
+    "movePageLeftRight": ""
   },
   "clearCanvasDialog": {
     "title": ""
@@ -391,7 +416,8 @@
     "fileSaved": "",
     "fileSavedToFilename": "",
     "canvas": "",
-    "selection": ""
+    "selection": "",
+    "pasteAsSingleElement": ""
   },
   "colors": {
     "ffffff": "",
@@ -439,5 +465,18 @@
     "5c940d": "",
     "e67700": "",
     "d9480f": ""
+  },
+  "welcomeScreen": {
+    "app": {
+      "center_heading": "",
+      "center_heading_plus": "",
+      "menuHint": ""
+    },
+    "defaults": {
+      "menuHint": "",
+      "center_heading": "",
+      "toolbarHint": "",
+      "helpHint": ""
+    }
   }
 }

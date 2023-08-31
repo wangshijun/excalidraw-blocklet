@@ -883,7 +883,7 @@ export const CenterHorizontallyIcon = createIcon(
   modifiedTablerIconProps,
 );
 
-export const UsersIcon = createIcon(
+export const usersIcon = createIcon(
   <g strokeWidth="1.5">
     <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
     <circle cx="9" cy="7" r="4"></circle>
@@ -1006,6 +1006,13 @@ export const UngroupIcon = React.memo(({ theme }: { theme: Theme }) =>
     </>,
     { width: 182, height: 182, mirror: true },
   ),
+);
+
+export const FillZigZagIcon = createIcon(
+  <g strokeWidth={1.25}>
+    <path d="M5.879 2.625h8.242a3.27 3.27 0 0 1 3.254 3.254v8.242a3.27 3.27 0 0 1-3.254 3.254H5.88a3.27 3.27 0 0 1-3.254-3.254V5.88A3.27 3.27 0 0 1 5.88 2.626l-.001-.001ZM4.518 16.118l7.608-12.83m.198 13.934 5.051-9.897M2.778 9.675l9.348-6.387m-7.608 12.83 12.857-8.793" />
+  </g>,
+  modifiedTablerIconProps,
 );
 
 export const FillHachureIcon = createIcon(
@@ -1470,11 +1477,11 @@ export const TextAlignRightIcon = createIcon(
 export const TextAlignTopIcon = React.memo(({ theme }: { theme: Theme }) =>
   createIcon(
     <g
-      stroke-width="1.5"
+      strokeWidth="1.5"
       stroke="currentColor"
       fill="none"
-      stroke-linecap="round"
-      stroke-linejoin="round"
+      strokeLinecap="round"
+      strokeLinejoin="round"
     >
       <path stroke="none" d="M0 0h24v24H0z" fill="none" />
       <line x1="4" y1="4" x2="20" y2="4" />
@@ -1488,11 +1495,11 @@ export const TextAlignTopIcon = React.memo(({ theme }: { theme: Theme }) =>
 export const TextAlignBottomIcon = React.memo(({ theme }: { theme: Theme }) =>
   createIcon(
     <g
-      stroke-width="2"
+      strokeWidth="2"
       stroke="currentColor"
       fill="none"
-      stroke-linecap="round"
-      stroke-linejoin="round"
+      strokeLinecap="round"
+      strokeLinejoin="round"
     >
       <path stroke="none" d="M0 0h24v24H0z" fill="none" />
       <line x1="4" y1="20" x2="20" y2="20" />
@@ -1506,11 +1513,11 @@ export const TextAlignBottomIcon = React.memo(({ theme }: { theme: Theme }) =>
 export const TextAlignMiddleIcon = React.memo(({ theme }: { theme: Theme }) =>
   createIcon(
     <g
-      stroke-width="1.5"
+      strokeWidth="1.5"
       stroke="currentColor"
       fill="none"
-      stroke-linecap="round"
-      stroke-linejoin="round"
+      strokeLinecap="round"
+      strokeLinejoin="round"
     >
       <path stroke="none" d="M0 0h24v24H0z" fill="none" />
       <line x1="4" y1="12" x2="9" y2="12" />
@@ -1531,4 +1538,15 @@ export const publishIcon = createIcon(
 
 export const eraser = createIcon(
   <path d="M480 416C497.7 416 512 430.3 512 448C512 465.7 497.7 480 480 480H150.6C133.7 480 117.4 473.3 105.4 461.3L25.37 381.3C.3786 356.3 .3786 315.7 25.37 290.7L258.7 57.37C283.7 32.38 324.3 32.38 349.3 57.37L486.6 194.7C511.6 219.7 511.6 260.3 486.6 285.3L355.9 416H480zM265.4 416L332.7 348.7L195.3 211.3L70.63 336L150.6 416L265.4 416z" />,
+);
+
+export const handIcon = createIcon(
+  <g strokeWidth={1.25}>
+    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+    <path d="M8 13v-7.5a1.5 1.5 0 0 1 3 0v6.5"></path>
+    <path d="M11 5.5v-2a1.5 1.5 0 1 1 3 0v8.5"></path>
+    <path d="M14 5.5a1.5 1.5 0 0 1 3 0v6.5"></path>
+    <path d="M17 7.5a1.5 1.5 0 0 1 3 0v8.5a6 6 0 0 1 -6 6h-2h.208a6 6 0 0 1 -5.012 -2.7a69.74 69.74 0 0 1 -.196 -.3c-.312 -.479 -1.407 -2.388 -3.286 -5.728a1.5 1.5 0 0 1 .536 -2.022a1.867 1.867 0 0 1 2.28 .28l1.47 1.47"></path>
+  </g>,
+  tablerIconProps,
 );

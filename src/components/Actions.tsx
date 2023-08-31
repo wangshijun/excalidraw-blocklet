@@ -5,7 +5,7 @@ import { ExcalidrawElement, PointerType } from "../element/types";
 import { t } from "../i18n";
 import { useDevice } from "../components/App";
 import {
-  canChangeSharpness,
+  canChangeRoundness,
   canHaveArrowheads,
   getTargetElements,
   hasBackground,
@@ -25,11 +25,15 @@ import Stack from "./Stack";
 import { ToolButton } from "./ToolButton";
 import { hasStrokeColor } from "../scene/comparisons";
 import { trackEvent } from "../analytics";
-import { hasBoundTextElement, isBoundToContainer } from "../element/typeChecks";
+import { hasBoundTextElement } from "../element/typeChecks";
 import clsx from "clsx";
 import { actionToggleZenMode } from "../actions";
 import "./Actions.scss";
 import { Tooltip } from "./Tooltip";
+import {
+  shouldAllowVerticalAlign,
+  suppportsHorizontalAlign,
+} from "../element/textElement";
 
 export const SelectedShapeActions = ({
   appState,
@@ -109,9 +113,9 @@ export const SelectedShapeActions = ({
         </>
       )}
 
-      {(canChangeSharpness(appState.activeTool.type) ||
-        targetElements.some((element) => canChangeSharpness(element.type))) && (
-        <>{renderAction("changeSharpness")}</>
+      {(canChangeRoundness(appState.activeTool.type) ||
+        targetElements.some((element) => canChangeRoundness(element.type))) && (
+        <>{renderAction("changeRoundness")}</>
       )}
 
       {(hasText(appState.activeTool.type) ||
@@ -121,14 +125,13 @@ export const SelectedShapeActions = ({
 
           {renderAction("changeFontFamily")}
 
-          {renderAction("changeTextAlign")}
+          {suppportsHorizontalAlign(targetElements) &&
+            renderAction("changeTextAlign")}
         </>
       )}
 
-      {targetElements.some(
-        (element) =>
-          hasBoundTextElement(element) || isBoundToContainer(element),
-      ) && renderAction("changeVerticalAlign")}
+      {shouldAllowVerticalAlign(targetElements) &&
+        renderAction("changeVerticalAlign")}
       {(canHaveArrowheads(appState.activeTool.type) ||
         targetElements.some((element) => canHaveArrowheads(element.type))) && (
         <>{renderAction("changeArrowhead")}</>
@@ -218,13 +221,13 @@ export const ShapesSwitcher = ({
   appState: AppState;
 }) => (
   <>
-    {SHAPES.map(({ value, icon, key, fillable }, index) => {
-      const numberKey = value === "eraser" ? 0 : index + 1;
+    {SHAPES.map(({ value, icon, key, numericKey, fillable }, index) => {
       const label = t(`toolBar.${value}`);
-      const letter = key && (typeof key === "string" ? key : key[0]);
+      const letter =
+        key && capitalizeString(typeof key === "string" ? key : key[0]);
       const shortcut = letter
-        ? `${capitalizeString(letter)} ${t("helpDialog.or")} ${numberKey}`
-        : `${numberKey}`;
+        ? `${letter} ${t("helpDialog.or")} ${numericKey}`
+        : `${numericKey}`;
       return (
         <ToolButton
           className={clsx("Shape", { fillable })}
@@ -234,7 +237,7 @@ export const ShapesSwitcher = ({
           checked={activeTool.type === value}
           name="editor-current-shape"
           title={`${capitalizeString(label)} — ${shortcut}`}
-          keyBindingLabel={`${numberKey}`}
+          keyBindingLabel={numericKey || letter}
           aria-label={capitalizeString(label)}
           aria-keyshortcuts={shortcut}
           data-testid={`toolbar-${value}`}
