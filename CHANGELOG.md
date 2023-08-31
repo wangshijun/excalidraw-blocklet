@@ -1,3 +1,7 @@
+## 0.7.0 (August 31, 2023)
+
+- chore: merge with latest excalidraw, v0.15.0
+
 ## 0.6.0 (November 07, 2022)
 
 - chore: merge with latest excalidraw

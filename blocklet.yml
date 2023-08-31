@@ -6,7 +6,7 @@ group: dapp
 main: server/index.js
 author:
   name: wangshijun
-specVersion: 1.2.7
+specVersion: 1.2.8
 files:
   - build
   - blocklet.md
@@ -20,7 +20,7 @@ interfaces:
     port: BLOCKLET_PORT
     protocol: http
 did: z8iZxVUfZZBPpLhVov5YqsaorNX9F2vKAKeMc
-version: 0.6.0
+version: 0.7.0
 community: ''
 documentation: https://blog.excalidraw.com
 license: MIT
@@ -38,6 +38,7 @@ environments: []
 capabilities:
   clusterMode: false
   component: true
+  navigation: true
 screenshots:
   - FOqBYTvVgBQKcyJ.jpeg
   - FOqBWm7VgAg2Lyy.jpeg
