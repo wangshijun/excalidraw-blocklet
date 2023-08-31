@@ -1,7 +1,7 @@
 homepage: https://github.com/wangshijun/excalidraw-blocklet
 name: excalidraw
 title: Excalidraw
-description: Self host excelidraw as a blocklet
+description: Create beautiful hand-drawn like diagrams, wireframes, or whatever you like.
 group: dapp
 main: server/index.js
 author:
@@ -40,6 +40,7 @@ capabilities:
   component: true
   navigation: true
 screenshots:
+  - open-graph.png
   - FOqBYTvVgBQKcyJ.jpeg
   - FOqBWm7VgAg2Lyy.jpeg
   - FOqBT5cVgBsZTZ5.jpeg
