@@ -20,7 +20,7 @@ interfaces:
     port: BLOCKLET_PORT
     protocol: http
 did: z8iZxVUfZZBPpLhVov5YqsaorNX9F2vKAKeMc
-version: 1.7.0
+version: 0.17.0
 community: ''
 documentation: https://blog.excalidraw.com
 license: MIT
