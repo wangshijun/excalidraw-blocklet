@@ -1,4 +1,4 @@
-import oc from "open-color";
+import { COLOR_PALETTE } from "./colors";
 import {
   DEFAULT_ELEMENT_PROPS,
   DEFAULT_FONT_FAMILY,
@@ -38,6 +38,7 @@ export const getDefaultAppState = (): Omit<
     currentItemStrokeWidth: DEFAULT_ELEMENT_PROPS.strokeWidth,
     currentItemTextAlign: DEFAULT_TEXT_ALIGN,
     cursorButton: "up",
+    activeEmbeddable: null,
     draggingElement: null,
     editingElement: null,
     editingGroupId: null,
@@ -58,7 +59,7 @@ export const getDefaultAppState = (): Omit<
     fileHandle: null,
     gridSize: null,
     isBindingEnabled: true,
-    isSidebarDocked: false,
+    defaultSidebarDockedPreference: false,
     isLoading: false,
     isResizing: false,
     isRotating: false,
@@ -78,13 +79,18 @@ export const getDefaultAppState = (): Omit<
     scrollY: 0,
     selectedElementIds: {},
     selectedGroupIds: {},
+    selectedElementsAreBeingDragged: false,
     selectionElement: null,
     shouldCacheIgnoreZoom: false,
     showStats: false,
     startBoundElement: null,
     suggestedBindings: [],
+    frameRendering: { enabled: true, clip: true, name: true, outline: true },
+    frameToHighlight: null,
+    editingFrame: null,
+    elementsToHighlight: null,
     toast: null,
-    viewBackgroundColor: oc.white,
+    viewBackgroundColor: COLOR_PALETTE.white,
     zenModeEnabled: false,
     zoom: {
       value: 1 as NormalizedZoomValue,
@@ -93,6 +99,12 @@ export const getDefaultAppState = (): Omit<
     pendingImageElementId: null,
     showHyperlinkPopup: false,
     selectedLinearElement: null,
+    snapLines: [],
+    originSnapOffset: {
+      x: 0,
+      y: 0,
+    },
+    objectsSnapModeEnabled: false,
   };
 };
 
@@ -134,6 +146,7 @@ const APP_STATE_STORAGE_CONF = (<
   currentItemStrokeWidth: { browser: true, export: false, server: false },
   currentItemTextAlign: { browser: true, export: false, server: false },
   cursorButton: { browser: true, export: false, server: false },
+  activeEmbeddable: { browser: false, export: false, server: false },
   draggingElement: { browser: false, export: false, server: false },
   editingElement: { browser: false, export: false, server: false },
   editingGroupId: { browser: true, export: false, server: false },
@@ -150,7 +163,11 @@ const APP_STATE_STORAGE_CONF = (<
   gridSize: { browser: true, export: true, server: true },
   height: { browser: false, export: false, server: false },
   isBindingEnabled: { browser: false, export: false, server: false },
-  isSidebarDocked: { browser: true, export: false, server: false },
+  defaultSidebarDockedPreference: {
+    browser: true,
+    export: false,
+    server: false,
+  },
   isLoading: { browser: false, export: false, server: false },
   isResizing: { browser: false, export: false, server: false },
   isRotating: { browser: false, export: false, server: false },
@@ -172,11 +189,20 @@ const APP_STATE_STORAGE_CONF = (<
   scrollY: { browser: true, export: false, server: false },
   selectedElementIds: { browser: true, export: false, server: false },
   selectedGroupIds: { browser: true, export: false, server: false },
+  selectedElementsAreBeingDragged: {
+    browser: false,
+    export: false,
+    server: false,
+  },
   selectionElement: { browser: false, export: false, server: false },
   shouldCacheIgnoreZoom: { browser: true, export: false, server: false },
   showStats: { browser: true, export: false, server: false },
   startBoundElement: { browser: false, export: false, server: false },
   suggestedBindings: { browser: false, export: false, server: false },
+  frameRendering: { browser: false, export: false, server: false },
+  frameToHighlight: { browser: false, export: false, server: false },
+  editingFrame: { browser: false, export: false, server: false },
+  elementsToHighlight: { browser: false, export: false, server: false },
   toast: { browser: false, export: false, server: false },
   viewBackgroundColor: { browser: true, export: true, server: true },
   width: { browser: false, export: false, server: false },
@@ -186,6 +212,9 @@ const APP_STATE_STORAGE_CONF = (<
   pendingImageElementId: { browser: false, export: false, server: false },
   showHyperlinkPopup: { browser: false, export: false, server: false },
   selectedLinearElement: { browser: true, export: false, server: false },
+  snapLines: { browser: false, export: false, server: false },
+  originSnapOffset: { browser: false, export: false, server: false },
+  objectsSnapModeEnabled: { browser: true, export: false, server: false },
 });
 
 const _clearAppStateForStorage = <

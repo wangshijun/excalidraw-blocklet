@@ -1,4 +1,4 @@
-import React, { useEffect, forwardRef } from "react";
+import React, { useEffect } from "react";
 import { InitializeApp } from "../../components/InitializeApp";
 import App from "../../components/App";
 import { isShallowEqual } from "../../utils";
@@ -6,7 +6,7 @@ import { isShallowEqual } from "../../utils";
 import "../../css/app.scss";
 import "../../css/styles.scss";
 
-import { AppProps, ExcalidrawAPIRefValue, ExcalidrawProps } from "../../types";
+import { AppProps, ExcalidrawProps } from "../../types";
 import { defaultLang } from "../../i18n";
 import { DEFAULT_UI_OPTIONS } from "../../constants";
 import { Provider } from "jotai";
@@ -20,11 +20,10 @@ const ExcalidrawBase = (props: ExcalidrawProps) => {
   const {
     onChange,
     initialData,
-    excalidrawRef,
+    excalidrawAPI,
     isCollaborating = false,
     onPointerUpdate,
     renderTopRightUI,
-    renderSidebar,
     langCode = defaultLang.code,
     viewModeEnabled,
     zenModeEnabled,
@@ -43,15 +42,22 @@ const ExcalidrawBase = (props: ExcalidrawProps) => {
     onPointerDown,
     onScrollChange,
     children,
+    validateEmbeddable,
+    renderEmbeddable,
   } = props;
 
   const canvasActions = props.UIOptions?.canvasActions;
 
+  // FIXME normalize/set defaults in parent component so that the memo resolver
+  // compares the same values
   const UIOptions: AppProps["UIOptions"] = {
     ...props.UIOptions,
     canvasActions: {
       ...DEFAULT_UI_OPTIONS.canvasActions,
       ...canvasActions,
+    },
+    tools: {
+      image: props.UIOptions?.tools?.image ?? true,
     },
   };
 
@@ -92,7 +98,7 @@ const ExcalidrawBase = (props: ExcalidrawProps) => {
         <App
           onChange={onChange}
           initialData={initialData}
-          excalidrawRef={excalidrawRef}
+          excalidrawAPI={excalidrawAPI}
           isCollaborating={isCollaborating}
           onPointerUpdate={onPointerUpdate}
           renderTopRightUI={renderTopRightUI}
@@ -114,7 +120,8 @@ const ExcalidrawBase = (props: ExcalidrawProps) => {
           onLinkOpen={onLinkOpen}
           onPointerDown={onPointerDown}
           onScrollChange={onScrollChange}
-          renderSidebar={renderSidebar}
+          validateEmbeddable={validateEmbeddable}
+          renderEmbeddable={renderEmbeddable}
         >
           {children}
         </App>
@@ -123,12 +130,7 @@ const ExcalidrawBase = (props: ExcalidrawProps) => {
   );
 };
 
-type PublicExcalidrawProps = Omit<ExcalidrawProps, "forwardedRef">;
-
-const areEqual = (
-  prevProps: PublicExcalidrawProps,
-  nextProps: PublicExcalidrawProps,
-) => {
+const areEqual = (prevProps: ExcalidrawProps, nextProps: ExcalidrawProps) => {
   // short-circuit early
   if (prevProps.children !== nextProps.children) {
     return false;
@@ -185,12 +187,7 @@ const areEqual = (
   return isUIOptionsSame && isShallowEqual(prev, next);
 };
 
-const forwardedRefComp = forwardRef<
-  ExcalidrawAPIRefValue,
-  PublicExcalidrawProps
->((props, ref) => <ExcalidrawBase {...props} excalidrawRef={ref} />);
-
-export const Excalidraw = React.memo(forwardedRefComp, areEqual);
+export const Excalidraw = React.memo(ExcalidrawBase, areEqual);
 Excalidraw.displayName = "Excalidraw";
 
 export {
@@ -245,3 +242,15 @@ export { MainMenu };
 export { useDevice } from "../../components/App";
 export { WelcomeScreen };
 export { LiveCollaborationTrigger };
+
+export { DefaultSidebar } from "../../components/DefaultSidebar";
+
+export { normalizeLink } from "../../data/url";
+export { convertToExcalidrawElements } from "../../data/transform";
+export { getCommonBounds } from "../../element/bounds";
+
+export {
+  elementsOverlappingBBox,
+  isElementInsideBBox,
+  elementPartiallyOverlapsWithOrContainsBBox,
+} from "../withinBounds";

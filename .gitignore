@@ -27,3 +27,5 @@ src/packages/excalidraw/example/public/excalidraw-assets-dev
 src/packages/excalidraw/example/public/excalidraw.development.js
 .blocklet
 coverage
+dev-dist
+html

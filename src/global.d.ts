@@ -18,8 +18,8 @@ interface Window {
   EXCALIDRAW_EXPORT_SOURCE: string;
   EXCALIDRAW_THROTTLE_RENDER: boolean | undefined;
   gtag: Function;
-  _paq: any[];
-  _mtm: any[];
+  sa_event: Function;
+  fathom: { trackEvent: Function };
 }
 
 interface CanvasRenderingContext2D {
@@ -36,16 +36,6 @@ interface CanvasRenderingContext2D {
       | [number, number, number] // [top-left, top-right-and-bottom-left, bottom-right]
       | [number, number, number, number], // [top-left, top-right, bottom-right, bottom-left]
   ) => void;
-}
-
-// https://github.com/facebook/create-react-app/blob/ddcb7d5/packages/react-scripts/lib/react-app.d.ts
-declare namespace NodeJS {
-  interface ProcessEnv {
-    readonly REACT_APP_BACKEND_V2_GET_URL: string;
-    readonly REACT_APP_BACKEND_V2_POST_URL: string;
-    readonly REACT_APP_PORTAL_URL: string;
-    readonly REACT_APP_FIREBASE_CONFIG: string;
-  }
 }
 
 interface Clipboard extends EventTarget {
@@ -119,4 +109,10 @@ declare module "image-blob-reduce" {
   }
   const reduce: ImageBlobReduce.ImageBlobReduceStatic;
   export = reduce;
+}
+
+declare namespace jest {
+  interface Expect {
+    toBeNonNaNNumber(): void;
+  }
 }
