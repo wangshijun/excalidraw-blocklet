@@ -1,4 +1,3 @@
-homepage: https://github.com/wangshijun/excalidraw-blocklet
 name: excalidraw
 title: Excalidraw
 description: Create beautiful hand-drawn like diagrams, wireframes, or whatever you like.
@@ -21,8 +20,12 @@ interfaces:
     protocol: http
 did: z8iZxVUfZZBPpLhVov5YqsaorNX9F2vKAKeMc
 version: 0.17.5
-community: ''
-documentation: https://blog.excalidraw.com
+community: 'https://x.com/excalidraw'
+documentation: https://docs.excalidraw.com
+homepage: https://blog.excalidraw.com
+repository:
+  type: git
+  url: git+https://github.com/wangshijun/excalidraw-blocklet.git
 license: MIT
 logo: logo.png
 payment:
