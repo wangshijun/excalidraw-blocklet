@@ -1,3 +1,7 @@
+## 0.17.6 (July 16, 2024)
+
+- chore: update blocklet.yml for open source github projects
+
 ## 0.17.5 (May 22, 2024)
 
 - chore: merge with latest excalidraw, v0.17.5

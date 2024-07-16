@@ -19,8 +19,8 @@ interfaces:
     port: BLOCKLET_PORT
     protocol: http
 did: z8iZxVUfZZBPpLhVov5YqsaorNX9F2vKAKeMc
-version: 0.17.5
-community: 'https://x.com/excalidraw'
+version: 0.17.6
+community: https://x.com/excalidraw
 documentation: https://docs.excalidraw.com
 homepage: https://blog.excalidraw.com
 repository:
