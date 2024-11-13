@@ -43,11 +43,10 @@ capabilities:
   component: true
   navigation: true
 screenshots:
-  - open-graph.png
-  - FOqBYTvVgBQKcyJ.jpeg
-  - FOqBWm7VgAg2Lyy.jpeg
-  - FOqBT5cVgBsZTZ5.jpeg
-  - FOqBVYNVgAwQpuc.jpeg
+  - 2be523609d4fc419cb0cc70855025d33.png
+  - 6a9997ef943475a99f95b6565d57c994.png
+  - 095adf9eab9e930863dc94a3a03f5b4f.png
+  - f80a6b31aa68b526fbbccc90109f9af6.png
 scripts:
   dev: npm run start
 components: []
