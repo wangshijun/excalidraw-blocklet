@@ -1,3 +1,7 @@
+## 0.17.7 (十一月 13, 2024)
+
+- chore: update screenshot
+
 ## 0.17.6 (July 16, 2024)
 
 - chore: update blocklet.yml for open source github projects
